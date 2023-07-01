@@ -1,0 +1,217 @@
+/* Colores principales */
+:root {
+  --color-primario: #3d70b2;
+  --color-secundario: #f4a261;
+  --color-fondo: #f8f8f8;
+  --color-texto: #333333;
+}
+
+/* Estilos generales */
+body {
+  background-color: var(--color-fondo);
+  color: var(--color-texto);
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilos para el header */
+header {
+  background-color: var(--color-primario);
+  color: #ffffff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  width: 150px;
+  margin-left: 3%;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.contacto {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.contacto a {
+  margin-right: 10px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+/* Estilos para el banner */
+.banner {
+  background-image: url("../img/banner.jpg");
+  width: 100%;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 32px;
+}
+
+/* Estilos para el filtro */
+.filtro {
+  text-align: center;
+  margin: 20px 0;
+}
+
+.filtro .categoria {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 10px;
+  background-color: var(--color-secundario);
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.filtro .categoria:hover,
+.filtro .categoria.active {
+  background-color: #e76f51;
+}
+
+/* Estilos para la galería */
+.galeria {
+  background-color: var(--color-fondo);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-gap: 20px;
+}
+
+.imagen,
+.video {
+  position: relative;
+  cursor: pointer;
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+}
+
+.imagen img {
+  width: 100%;
+  height: 100%;
+  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+
+.video video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.imagen:hover img {
+  transform: scale(1.05);
+}
+
+.video {
+  position: relative;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.video:hover .video-overlay {
+  opacity: 1;
+}
+
+.video-overlay i {
+  color: #fff;
+  font-size: 4rem;
+}
+
+/* Estilos para el lightbox */
+.lightbox {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+}
+
+.lightbox .cerrar {
+  color: #fff;
+  font-size: 24px;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  cursor: pointer;
+}
+
+.lightbox .media-ampliada img,
+video {
+  display: block;
+  margin: 0 auto;
+  max-width: 90%;
+  max-height: 90%;
+  margin-top: 5%;
+}
+
+/* Estilos para las categorías */
+.categoria {
+  display: inline-block;
+  padding: 8px 12px;
+  margin-right: 10px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  text-transform: uppercase;
+}
+
+.categoria:hover,
+.categoria.active {
+  background-color: #e76f51;
+}
+
+.whatsapp-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 60px;
+  height: 60px;
+  background-color: #25d366;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 24px;
+  z-index: 9999;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
+}
+
+.whatsapp-btn:hover {
+  background-color: #128c7e;
+}
