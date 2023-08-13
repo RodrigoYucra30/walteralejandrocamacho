@@ -19,15 +19,15 @@ body {
 header {
   background-color: var(--color-primario);
   color: #ffffff;
-  padding: 10px;
+  padding: 7px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
 .logo {
-  width: 150px;
-  margin-left: 3%;
+  width: 160px;
+  margin-left: 10px;
 }
 
 .logo img {
@@ -36,7 +36,7 @@ header {
 }
 
 .contacto {
-  font-size: 20px;
+  font-size: 23px;
   display: flex;
   align-items: center;
 }
@@ -48,7 +48,7 @@ header {
 }
 
 /* Estilos para el banner */
-.banner {
+/* .banner {
   background-image: url("../img/banner.jpg");
   width: 100%;
   height: 400px;
@@ -60,24 +60,67 @@ header {
   justify-content: center;
   color: #fff;
   font-size: 32px;
+} */
+/* Estilos para la sección de eslogan y banner */
+.slogan-banner {
+  background-image: url("../img/wallpaper.jpg"); /* Replace with the path to your banner image */
+  width: 100%;
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
 }
+
+.slogan {
+  background-color: rgba(0, 0, 0, 0.7);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 80%;
+}
+
+.slogan h2 {
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Adjust styles for smaller screens if needed */
+@media (max-width: 768px) {
+  .slogan h2 {
+      font-size: 18px;
+  }
+}
+
 
 /* Estilos para el filtro */
 .filtro {
   text-align: center;
-  margin: 20px 0;
+  margin: 15px 0;
 }
 
 .filtro .categoria {
   display: inline-block;
-  padding: 8px 12px;
-  margin-right: 10px;
+  padding: 7px 10px;
+  margin-right: 8px;
   background-color: var(--color-secundario);
   color: #ffffff;
   border: none;
   cursor: pointer;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+@media (max-width: 768px) {
+  .filtro .categoria {
+    padding: 6px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
 }
 
 .filtro .categoria:hover,
@@ -91,6 +134,7 @@ header {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   grid-gap: 20px;
+  padding: 5px;
 }
 
 .imagen,
@@ -133,12 +177,8 @@ header {
   justify-content: center;
   align-items: center;
   background-color: rgba(0, 0, 0, 0.5);
-  opacity: 0;
-  transition: opacity 0.3s;
-}
-
-.video:hover .video-overlay {
   opacity: 1;
+  transition: opacity 0.3s;
 }
 
 .video-overlay i {
@@ -214,4 +254,91 @@ video {
 
 .whatsapp-btn:hover {
   background-color: #128c7e;
+}
+
+/* Estilos para dispositivos móviles */
+
+/* Estilos generales */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+
+  .logo {
+    width: 120px;
+  }
+
+  .contacto {
+    font-size: 16px;
+  }
+}
+
+/* Estilos para el banner */
+@media (max-width: 768px) {
+  .banner {
+    font-size: 24px;
+  }
+}
+
+/* Estilos para el filtro */
+@media (max-width: 768px) {
+  .filtro {
+    margin: 10px 0;
+  }
+
+  .filtro .categoria {
+    padding: 6px 10px;
+    margin-right: 5px;
+    margin-top: 5px;
+    font-size: 12px;
+  }
+}
+
+/* Estilos para la galería */
+@media (max-width: 768px) {
+  .galeria {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-gap: 15px;
+  }
+
+  .imagen,
+  .video {
+    height: 250px;
+  }
+}
+
+/* Estilos para el lightbox */
+@media (max-width: 768px) {
+  .lightbox .cerrar {
+    top: 10px;
+    right: 20px;
+    font-size: 20px;
+  }
+
+  .lightbox .media-ampliada img,
+  video {
+    max-width: 90%;
+    max-height: 90%;
+    margin-top: 10%;
+  }
+}
+
+/* Estilos para las categorías */
+@media (max-width: 768px) {
+  .categoria {
+    padding: 6px 10px;
+    margin-right: 5px;
+    font-size: 12px;
+  }
+}
+
+/* Estilos para el botón de WhatsApp */
+@media (max-width: 768px) {
+  .whatsapp-btn {
+    bottom: 15px;
+    right: 15px;
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+  }
 }
