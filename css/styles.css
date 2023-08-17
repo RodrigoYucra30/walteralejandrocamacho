@@ -25,14 +25,48 @@ header {
   align-items: center;
 }
 
+/* Add these styles to your existing CSS code */
 .logo {
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
   width: 160px;
   margin-left: 10px;
 }
 
-.logo img {
-  width: 100%;
-  height: auto;
+/* Add these styles to your existing CSS code */
+.logo-text {
+  margin-left: 10px;
+  color: #ffffff;
+}
+
+.logo-name {
+  font-size: 24px; /* Adjust the size as needed */
+  font-weight: bold;
+  margin: 0;
+}
+
+.engineer-name {
+  font-size: 20px; /* Adjust the size as needed */
+  margin: 0;
+}
+
+/* Adjust styles for smaller screens if needed */
+@media (max-width: 768px) {
+  .logo-name {
+    font-size: 18px; /* Adjust the size as needed */
+  }
+
+  .engineer-name {
+    font-size: 14px; /* Adjust the size as needed */
+  }
+
+  .logo img {
+    width: 80px;
+    margin-left: 5px;
+  }
 }
 
 .contacto {
@@ -47,20 +81,6 @@ header {
   text-decoration: none;
 }
 
-/* Estilos para el banner */
-/* .banner {
-  background-image: url("../img/banner.jpg");
-  width: 100%;
-  height: 400px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  font-size: 32px;
-} */
 /* Estilos para la sección de eslogan y banner */
 .slogan-banner {
   background-image: url("../img/wallpaper.jpg"); /* Replace with the path to your banner image */
@@ -91,10 +111,9 @@ header {
 /* Adjust styles for smaller screens if needed */
 @media (max-width: 768px) {
   .slogan h2 {
-      font-size: 18px;
+    font-size: 18px;
   }
 }
-
 
 /* Estilos para el filtro */
 .filtro {
@@ -116,10 +135,10 @@ header {
 
 @media (max-width: 768px) {
   .filtro .categoria {
-    padding: 6px 10px;
-    margin-right: 5px;
-    margin-top: 5px;
-    font-size: 12px;
+    padding: 3px 5px;
+    margin-right: 3px;
+    margin-top: 3px;
+    font-size: 10px;
   }
 }
 
